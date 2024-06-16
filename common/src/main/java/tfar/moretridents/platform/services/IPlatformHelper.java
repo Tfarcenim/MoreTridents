@@ -1,4 +1,6 @@
-package com.example.examplemod.platform.services;
+package tfar.moretridents.platform.services;
+
+import net.minecraft.core.Registry;
 
 public interface IPlatformHelper {
 
@@ -33,4 +35,8 @@ public interface IPlatformHelper {
 
         return isDevelopmentEnvironment() ? "development" : "production";
     }
+
+    <F> void registerAll(Class<?> clazz, Registry<? extends F> registry, Class<F> filter);
+
+
 }
