@@ -1,6 +1,8 @@
 package tfar.moretridents;
 
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
+import tfar.moretridents.init.ModItems;
 import tfar.moretridents.platform.Services;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.Items;
@@ -21,6 +23,7 @@ public class MoreTridents {
     // write the majority of your code here and load it from your loader specific projects. This example has some
     // code that gets invoked by the entry point of the loader specific projects.
     public static void init() {
+        Services.PLATFORM.registerAll(ModItems.class,BuiltInRegistries.ITEM, Item.class);
     }
 
     public static ResourceLocation id(String path) {
