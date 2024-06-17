@@ -1,6 +1,7 @@
 package tfar.moretridents.platform.services;
 
 import net.minecraft.core.Registry;
+import tfar.moretridents.platform.MLConfig;
 
 public interface IPlatformHelper {
 
@@ -38,5 +39,6 @@ public interface IPlatformHelper {
 
     <F> void registerAll(Class<?> clazz, Registry<? extends F> registry, Class<F> filter);
 
+    MLConfig getConfig();
 
 }

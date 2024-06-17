@@ -1,4 +1,4 @@
-package tfar.moretridents;
+ package tfar.moretridents;
 
 import net.fabricmc.api.ModInitializer;
 

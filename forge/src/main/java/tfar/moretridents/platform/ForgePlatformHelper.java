@@ -6,6 +6,7 @@ import net.minecraft.resources.ResourceLocation;
 import org.apache.commons.lang3.tuple.Pair;
 import tfar.moretridents.MoreTridents;
 import tfar.moretridents.MoreTridentsForge;
+import tfar.moretridents.TomlConfig;
 import tfar.moretridents.platform.services.IPlatformHelper;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.loading.FMLLoader;
@@ -17,6 +18,8 @@ import java.util.Locale;
 import java.util.function.Supplier;
 
 public class ForgePlatformHelper implements IPlatformHelper {
+
+    final MLConfig config = new TomlConfig();
 
     @Override
     public String getPlatformName() {
@@ -53,4 +56,8 @@ public class ForgePlatformHelper implements IPlatformHelper {
         }
     }
 
+    @Override
+    public MLConfig getConfig() {
+        return config;
+    }
 }
