@@ -12,35 +12,41 @@ import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.loaders.SeparateTransformsModelBuilder;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import tfar.moretridents.MoreTridents;
+import tfar.moretridents.TieredTridentItem;
+import tfar.moretridents.init.ModItems;
 
 public class ModItemModelProvider extends ItemModelProvider {
     public ModItemModelProvider(PackOutput generator, ExistingFileHelper existingFileHelper) {
         super(generator, MoreTridents.MOD_ID, existingFileHelper);
     }
 
+    //   private static final ModelResourceLocation TRIDENT_MODEL = ModelResourceLocation.vanilla("trident", "inventory");
+    //   public static final ModelResourceLocation TRIDENT_IN_HAND_MODEL = ModelResourceLocation.vanilla("trident_in_hand", "inventory");
+
     @Override
     protected void registerModels() {
     //    makeSpriteModel("rudimentary_gauntlet");
       //  makeSpriteModel("netherite_gauntlet");
 
+       // pDisplayContext == ItemDisplayContext.GUI || pDisplayContext == ItemDisplayContext.GROUND || pDisplayContext == ItemDisplayContext.FIXED;
 
-    }
+        trident(ModItems.WOODEN_TRIDENT);
 
-    private void otherGauntlets() {
-        perspectiveGauntlet("rudimentary_gauntlet");
-        perspectiveGauntlet("netherite_gauntlet");
     }
 
     protected ItemModelBuilder makeSpriteModel(String name) {
-        return getBuilder("item/sprite/" + name)
+        return getBuilder("item/perspective/gui/" + name)
                 .parent(getExistingFile(mcLoc("item/generated")))
-                .texture("layer0", "item/sprite/" + name);
+                .texture("layer0", "item/perspective/gui/" + name);
 
     }
 
-    private void perspectiveGauntlet(String name) {
+    private void trident(TieredTridentItem tieredTridentItem) {
+
+        String name = BuiltInRegistries.ITEM.getKey(tieredTridentItem).getPath();
+
         ItemModelBuilder r3dFile = nested()
-                .parent(getExistingFile(modLoc("item/3d/" + name)));
+                .parent(getExistingFile(modLoc("item/perspective/3d/" + name)));
 
         ItemModelBuilder rSpriteFile = makeSpriteModel(name);
 

@@ -1,3 +1,10 @@
 accessWidener v1 named
 
 extendable method net/minecraft/world/item/Item getMaxDamage ()I
+
+accessible field net/minecraft/world/entity/projectile/ThrownTrident tridentItem Lnet/minecraft/world/item/ItemStack;
+accessible field net/minecraft/world/entity/projectile/ThrownTrident dealtDamage Z
+
+# Registering BlockEntity and Entity renderers
+accessible method net/minecraft/client/renderer/blockentity/BlockEntityRenderers register (Lnet/minecraft/world/level/block/entity/BlockEntityType;Lnet/minecraft/client/renderer/blockentity/BlockEntityRendererProvider;)V
+accessible method net/minecraft/client/renderer/entity/EntityRenderers register (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/client/renderer/entity/EntityRendererProvider;)V
