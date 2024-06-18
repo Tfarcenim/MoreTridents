@@ -7,26 +7,18 @@
   },
   "gui_light": "front",
   "loader": "forge:separate_transforms",
-  "overrides": [
-    {
-      "model": "moretridents:item/diamond_trident_throwing",
-      "predicate": {
-        "minecraft:throwing": 1.0
-      }
-    }
-  ],
   "perspectives": {
     "firstperson_lefthand": {
-      "parent": "minecraft:item/trident_in_hand"
+      "parent": "minecraft:item/trident_throwing"
     },
     "firstperson_righthand": {
-      "parent": "minecraft:item/trident_in_hand"
+      "parent": "minecraft:item/trident_throwing"
     },
     "thirdperson_lefthand": {
-      "parent": "minecraft:item/trident_in_hand"
+      "parent": "minecraft:item/trident_throwing"
     },
     "thirdperson_righthand": {
-      "parent": "minecraft:item/trident_in_hand"
+      "parent": "minecraft:item/trident_throwing"
     }
   }
 }

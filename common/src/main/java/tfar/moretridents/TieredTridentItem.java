@@ -39,9 +39,7 @@ public class TieredTridentItem extends TridentItem {
                 int j = EnchantmentHelper.getRiptide(pStack);
                 if (j <= 0 || player.isInWaterOrRain()) {
                     if (!pLevel.isClientSide) {
-                        pStack.hurtAndBreak(1, player, (p_43388_) -> {
-                            p_43388_.broadcastBreakEvent(pEntityLiving.getUsedItemHand());
-                        });
+                        pStack.hurtAndBreak(1, player, (player1) -> player1.broadcastBreakEvent(pEntityLiving.getUsedItemHand()));
                         if (j == 0) {
                             ThrownTrident throwntrident = new ThrownTieredTridentEntity(pLevel, player, pStack);
                             throwntrident.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 2.5F + j * 0.5F, 1.0F);

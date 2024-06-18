@@ -5,6 +5,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import tfar.moretridents.MoreTridents;
 import tfar.moretridents.init.ModItems;
@@ -21,5 +22,6 @@ public class ModItemTagsProvider extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
         tag(ItemTags.PIGLIN_LOVED).add(ModItems.GOLDEN_TRIDENT);
+        tag(Tags.Items.TOOLS_TRIDENTS).add(ModItems.WOODEN_TRIDENT,ModItems.GOLDEN_TRIDENT,ModItems.DIAMOND_TRIDENT,ModItems.EMERALD_TRIDENT,ModItems.LAPIS_TRIDENT,ModItems.AMETHYST_TRIDENT,ModItems.NETHERITE_TRIDENT);
     }
 }
