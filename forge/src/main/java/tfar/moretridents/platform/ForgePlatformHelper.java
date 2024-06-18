@@ -3,10 +3,10 @@ package tfar.moretridents.platform;
 import net.minecraft.core.MappedRegistry;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import org.apache.commons.lang3.tuple.Pair;
-import tfar.moretridents.MoreTridents;
-import tfar.moretridents.MoreTridentsForge;
-import tfar.moretridents.TomlConfig;
+import tfar.moretridents.*;
+import tfar.moretridents.item.TieredTridentItemForge;
 import tfar.moretridents.platform.services.IPlatformHelper;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.loading.FMLLoader;
@@ -59,5 +59,10 @@ public class ForgePlatformHelper implements IPlatformHelper {
     @Override
     public MLConfig getConfig() {
         return config;
+    }
+
+    @Override
+    public TieredTridentItem makeTrident(ConfigurableTridentTier configurableTridentTier, Item.Properties properties) {
+        return new TieredTridentItemForge(configurableTridentTier,properties);
     }
 }

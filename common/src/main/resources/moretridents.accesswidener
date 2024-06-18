@@ -4,6 +4,7 @@ extendable method net/minecraft/world/item/Item getMaxDamage ()I
 
 accessible field net/minecraft/world/entity/projectile/ThrownTrident tridentItem Lnet/minecraft/world/item/ItemStack;
 accessible field net/minecraft/world/entity/projectile/ThrownTrident dealtDamage Z
+accessible field net/minecraft/client/renderer/BlockEntityWithoutLevelRenderer tridentModel Lnet/minecraft/client/model/TridentModel;
 
 # Registering BlockEntity and Entity renderers
 accessible method net/minecraft/client/renderer/blockentity/BlockEntityRenderers register (Lnet/minecraft/world/level/block/entity/BlockEntityType;Lnet/minecraft/client/renderer/blockentity/BlockEntityRendererProvider;)V

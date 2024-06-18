@@ -1,0 +1,24 @@
+{
+  "base": {
+    "parent": "minecraft:item/generated",
+    "textures": {
+      "layer0": "moretridents:item/gui/wooden_trident"
+    }
+  },
+  "gui_light": "front",
+  "loader": "forge:separate_transforms",
+  "perspectives": {
+    "firstperson_lefthand": {
+      "parent": "moretridents:item/base_trident_in_hand"
+    },
+    "firstperson_righthand": {
+      "parent": "moretridents:item/base_trident_in_hand"
+    },
+    "thirdperson_lefthand": {
+      "parent": "moretridents:item/base_trident_in_hand"
+    },
+    "thirdperson_righthand": {
+      "parent": "moretridents:item/base_trident_in_hand"
+    }
+  }
+}

@@ -35,9 +35,9 @@ public class ModItemModelProvider extends ItemModelProvider {
     }
 
     protected ItemModelBuilder makeSpriteModel(String name) {
-        return getBuilder("item/perspective/gui/" + name)
+        return getBuilder("item/gui/" + name)
                 .parent(getExistingFile(mcLoc("item/generated")))
-                .texture("layer0", "item/perspective/gui/" + name);
+                .texture("layer0", "item/gui/" + name);
 
     }
 
@@ -47,7 +47,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         //trident in hand model
         ItemModelBuilder r3dFile = nested()
-                .parent(getExistingFile(modLoc("item/base_trident_in_hand")));
+                .parent(getExistingFile(mcLoc("item/trident_in_hand")));
 
         ItemModelBuilder rSpriteFile = makeSpriteModel(name);
 

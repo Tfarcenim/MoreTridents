@@ -1,6 +1,9 @@
 package tfar.moretridents.platform.services;
 
 import net.minecraft.core.Registry;
+import net.minecraft.world.item.Item;
+import tfar.moretridents.ConfigurableTridentTier;
+import tfar.moretridents.TieredTridentItem;
 import tfar.moretridents.platform.MLConfig;
 
 public interface IPlatformHelper {
@@ -40,5 +43,6 @@ public interface IPlatformHelper {
     <F> void registerAll(Class<?> clazz, Registry<? extends F> registry, Class<F> filter);
 
     MLConfig getConfig();
+    TieredTridentItem makeTrident(ConfigurableTridentTier configurableTridentTier, Item.Properties properties);
 
 }
