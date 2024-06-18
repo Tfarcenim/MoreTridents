@@ -45,8 +45,9 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         String name = BuiltInRegistries.ITEM.getKey(tieredTridentItem).getPath();
 
+        //trident in hand model
         ItemModelBuilder r3dFile = nested()
-                .parent(getExistingFile(modLoc("item/perspective/3d/" + name)));
+                .parent(getExistingFile(modLoc("item/base_trident_in_hand")));
 
         ItemModelBuilder rSpriteFile = makeSpriteModel(name);
 
