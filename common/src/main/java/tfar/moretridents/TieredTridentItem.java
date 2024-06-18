@@ -1,12 +1,18 @@
 package tfar.moretridents;
 
+import com.google.common.collect.ImmutableMultimap;
+import com.google.common.collect.Multimap;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.util.Mth;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.MoverType;
+import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.projectile.ThrownTrident;
@@ -19,6 +25,7 @@ import tfar.moretridents.entity.ThrownTieredTridentEntity;
 
 public class TieredTridentItem extends TridentItem {
     private final ConfigurableTridentTier configurableTridentTier;
+    protected ImmutableMultimap<Attribute, AttributeModifier> defaultModifiers1;
 
     public TieredTridentItem(ConfigurableTridentTier configurableTridentTier, Properties properties) {
         super(properties);
@@ -106,5 +113,15 @@ public class TieredTridentItem extends TridentItem {
         return getTridentTier().repairIngredient().get().test(pRepair) || super.isValidRepairItem(pToRepair, pRepair);
     }
 
+    @Override
+    public Multimap<Attribute, AttributeModifier> getDefaultAttributeModifiers(EquipmentSlot $$0) {
+        if (defaultModifiers1 == null) {
+            ImmutableMultimap.Builder<Attribute, AttributeModifier> $$1 = ImmutableMultimap.builder();
+            $$1.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Tool modifier", BASE_DAMAGE + getTridentTier().tridentConfig().damage(), AttributeModifier.Operation.ADDITION));
+            $$1.put(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Tool modifier", -2.9, AttributeModifier.Operation.ADDITION));
+            this.defaultModifiers1 = $$1.build();
+        }
+        return $$0 == EquipmentSlot.MAINHAND ? this.defaultModifiers1 :ImmutableMultimap.of();
+    }
 
 }

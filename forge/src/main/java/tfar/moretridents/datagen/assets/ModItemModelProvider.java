@@ -31,6 +31,14 @@ public class ModItemModelProvider extends ItemModelProvider {
        // pDisplayContext == ItemDisplayContext.GUI || pDisplayContext == ItemDisplayContext.GROUND || pDisplayContext == ItemDisplayContext.FIXED;
 
         trident(ModItems.WOODEN_TRIDENT);
+        trident(ModItems.IRON_TRIDENT);
+        trident(ModItems.GOLDEN_TRIDENT);
+        trident(ModItems.DIAMOND_TRIDENT);
+        trident(ModItems.EMERALD_TRIDENT);
+        trident(ModItems.LAPIS_TRIDENT);
+        trident(ModItems.AMETHYST_TRIDENT);
+        trident(ModItems.NETHERITE_TRIDENT);
+
 
     }
 

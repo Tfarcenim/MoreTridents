@@ -2,7 +2,7 @@
   "base": {
     "parent": "minecraft:item/generated",
     "textures": {
-      "layer0": "moretridents:item/gui/wooden_trident"
+      "layer0": "moretridents:item/gui/lapis_trident"
     }
   },
   "gui_light": "front",

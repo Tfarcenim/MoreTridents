@@ -1,3 +1,17 @@
-// 1.20.1	2024-06-17T22:07:55.5167132	Item Models: moretridents
+// 1.20.1	2024-06-17T22:44:59.1390996	Item Models: moretridents
+625b0b2e7129fe69d1b09f7067ede7529d95ae83 assets/moretridents/models/item/amethyst_trident.json
+b97dfb1df6d15ab5f6896c8167b509cd55b7dd6f assets/moretridents/models/item/diamond_trident.json
+3a213d08a16a29e08fb2d9ff99184dbb161dd924 assets/moretridents/models/item/emerald_trident.json
+af40762b515173c2982f506d14c0d41d7b4e6dba assets/moretridents/models/item/golden_trident.json
+17e02c12164b1863192d531f7514bf0f6807a619 assets/moretridents/models/item/gui/amethyst_trident.json
+248023912963f156f88f7869301327383be05009 assets/moretridents/models/item/gui/diamond_trident.json
+0da4691840858ead2ac99379146d84f029e0620a assets/moretridents/models/item/gui/emerald_trident.json
+2c4f25b950ee3e7b945135f54403818460b715f0 assets/moretridents/models/item/gui/golden_trident.json
+86954c60fd0e49965031887d3ca1dd5b72c4194d assets/moretridents/models/item/gui/iron_trident.json
+3fb8379f4e8004ad4ac0ebcdfb94e9fa0cdfcc87 assets/moretridents/models/item/gui/lapis_trident.json
+f99deb50e23d6e4aab9a075d7cf136a41a0850f2 assets/moretridents/models/item/gui/netherite_trident.json
 da1add804f693c57da4a3ee32caf57ae391ffd23 assets/moretridents/models/item/gui/wooden_trident.json
-7fa728c6801bb1f5381169d7651388678de8ae96 assets/moretridents/models/item/wooden_trident.json
+830a59230a784a6daf1ee86b71643e64cc7ded6a assets/moretridents/models/item/iron_trident.json
+29d7536b3202c8e56ce7222e67f01fb124ada8ba assets/moretridents/models/item/lapis_trident.json
+e725f20d053dc6ffb60b5543979876112eed2baa assets/moretridents/models/item/netherite_trident.json
+8d60325763866b50fe4a882edc4a98d0910cbedc assets/moretridents/models/item/wooden_trident.json
